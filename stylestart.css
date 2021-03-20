@@ -1,0 +1,16 @@
+body{
+    background-color:  rgba(48, 103, 255, 0.192);
+}
+
+div{
+    text-align: center;
+}
+
+.content{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+a{
+    color: red;
+}
