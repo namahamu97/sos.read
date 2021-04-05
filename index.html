@@ -9,22 +9,41 @@
 </head>
 
 <body>
+<div class="mei">
+        <p class="a">私は</p>
+        <p class="name"></p>
+        <p class="a">といいます。</p>
+    </div>
     <div>
-<p>私には</p>
-<h1 class="name"></h1>
-<p>
-    という障がい・疾病があります。
-</p>
-</div>
-<div><p class="content"></p></div>
-<div><a href="https://namahamu97.github.io/sos.read2/">災害時はここをクリック</a></div>
-
+        <p class="syou"></p>
+        <p class="a">という障がい・疾病があります。</p>
+        <p class="setu"></p>
+    </div>
+    <div>
+        <p class="a">困ったときは</p>
+        <p class="sisetu"></p><p class="renraku"></p>
+        <p class="a">に連絡してください</p>
+    </div>
+    <div><button class="b">災害時はここをクリック</button></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
                      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDzyp1CZPzhelBJQErgxa91Qh6MElKAWxo",
+            authDomain: "sos-file-6b29b.firebaseapp.com",
+            projectId: "sos-file-6b29b",
+            storageBucket: "sos-file-6b29b.appspot.com",
+            messagingSenderId: "1026900784152",
+            appId: "1:1026900784152:web:f796185fd249ae9b853f6d"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -47,16 +66,49 @@
                 const data = doc.data()
                 namae += '<p>' + data.スタート名前 + '<p>'
                 $(".name").html(namae)
-        });
+            });
 
-            db.collection("sosfile").doc("OC5Lf2cjhQdINcjbLZdk").
+        db.collection("sosfile").doc("OC5Lf2cjhQdINcjbLZdk").
+            onSnapshot((doc) => {
+                //console.log(querySnapshot)
+                let con = ''
+                const data = doc.data()
+                con += '<p>' + data.スタート障 + '<p>'
+                $(".syou").html(con)
+            });
+
+        db.collection("sosfile").doc("OC5Lf2cjhQdINcjbLZdk").
                 onSnapshot((doc) => {
                     //console.log(querySnapshot)
-                    let con = ''
+                    let se = ''
                     const data = doc.data()
-                    con += '<p>' + data.スタート説明 + '<p>'
-                    $(".content").html(con)
+                    se += '<p>' + data.スタート説明 + '<p>'
+                    $(".setu").html(se)
                 });
+
+        db.collection("sosfile").doc("OC5Lf2cjhQdINcjbLZdk").
+                onSnapshot((doc) => {
+                    //console.log(querySnapshot)
+                    let si = ''
+                    const data = doc.data()
+                    si += '<p>' + data.スタート施設 + '<p>'
+                    $(".sisetu").html(si)
+                });
+
+        db.collection("sosfile").doc("OC5Lf2cjhQdINcjbLZdk").
+                onSnapshot((doc) => {
+                    //console.log(querySnapshot)
+                    let re = ''
+                    const data = doc.data()
+                    re += '<p>' + data.スタート連絡 + '<p>'
+                    $(".renraku").html(re)
+                });    
+    </script>
+
+    <script>
+        $(".b").on("click", function () {
+            window.location.href = "https://namahamu97.github.io/sos.read2/"
+        })
     </script>
 </body>
 </html>
