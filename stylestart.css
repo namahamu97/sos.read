@@ -39,7 +39,7 @@ img{
 footer{
     width: 100%;
     color: #2F3A50;
-    padding: 20px 0;
+    padding: 15px 0;
     background-color: #E0F2FE;
     position: absolute;/*←絶対位置*/
     bottom: 0; /*下に固定*/
