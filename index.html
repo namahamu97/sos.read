@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylestart.css">
-    <title>Document</title>
+    <title>kakeTell</title>
 </head>
 
 <body>
-<div class="mei">
-        <p class="a">私は</p>
+    <!-- <div class="mei">
         <p class="name"></p>
         <p class="a">といいます。</p>
-    </div>
+    </div> -->
     <div>
-        <p class="syou"></p>
+        <p class="a">私は</p>
+        <h2 class="syou"></h2>
         <p class="a">という障がい・疾病があります。</p>
-        <p class="setu"></p>
+        <h3 class="setu"></h3>
     </div>
-    <div>
-        <p class="a">困ったときは</p>
-        <p class="sisetu"></p><p class="renraku"></p>
+
+    <fieldset>
+        <legend>困ったときは</legend>
+        <h2 class="sisetu"></h2>
+        <h2 class="renraku"></h2>
         <p class="a">に連絡してください</p>
+    </fieldset>
+
+    <div class="footer">
+    <footer>
+        <img src="logo.png" alt="">
+        <p style="font-size: 20px;">kakeTell</p>
+    </footer>
     </div>
-    <div><button class="b">災害時はここをクリック</button></div>
+    <!-- <div><button class="b">災害時はここをクリック</button></div> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
                      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDzyp1CZPzhelBJQErgxa91Qh6MElKAWxo",
-            authDomain: "sos-file-6b29b.firebaseapp.com",
-            projectId: "sos-file-6b29b",
-            storageBucket: "sos-file-6b29b.appspot.com",
-            messagingSenderId: "1026900784152",
-            appId: "1:1026900784152:web:f796185fd249ae9b853f6d"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -111,4 +109,5 @@
         })
     </script>
 </body>
+
 </html>
