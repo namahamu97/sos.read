@@ -1,31 +1,54 @@
 body{
-    background-color:  #3584bb;
+    background-color:  #E0F2FE;
 }
 
 div{
     text-align: center;
 }
 
-a{
-    color: red;
-}
-
-.a{
+/* .a{
     color: rgba(255, 255, 255, 0.76);
-}
+} */
 
-.mei{
+/* .mei{
    display: flex;
    justify-content: center; 
    align-items: center;
-}
+} */
 
 .name,.syou,.setu,.sisetu,.renraku{
-    font-weight: 1000;
-    color: white;
+    color: #2F3A50;
+    font-family:"BIZ UDPGothic";
 }
 
-button{
+/* button{
     background-color: red;
     color: white;
+} */
+
+fieldset{
+    border: 3px solid #2F3A50; 
+    padding: 10px;
+    text-align: center;
+}
+
+img{
+    width: 80px;
+}
+
+footer{
+    width: 100%;
+    color: #fff;
+    padding: 30px 0;
+    background-color: #E0F2FE;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+legend{
+    font-size: 28px;
 }
